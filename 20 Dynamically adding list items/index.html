@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #add{
+padding: 5px;
+background-color: gainsboro;
+color: black;
+text-align: center;
+align-self: center;
+margin-bottom: 30px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        background-color: purple;
+        display: flex;
+        justify-content: center;
+    }
+    .box{
+      
+       margin: 10px;
+        padding: 15px;
+        height: 500px;
+        width: 400px;
+        background-color: aliceblue;
+        border-radius: 25px;
+      
+    }
+    
+</style>
+</head>
+<body>
+    <div class="box">
+        <button id="add">click to add list</button><br>
+        <ul id="items"></ul>
+        <p id="message" style="display:none">List ended</p>
+    </div>
+    <script>
+        let btn=document.getElementById('add');
+        let ul=document.getElementById('items');
+        let array=["html","css","javascript","dom"];
+        btn.addEventListener('click',()=>{
+for(let i=0;i<array.length;i++){
+    let li=document.createElement('li');
+    li.innerText=array[i];
+    ul.appendChild(li);
+
+}
+message.style.display='block';
+btn.disabled=true;
+        });
+    </script>
+    
+</body>
+</html>
