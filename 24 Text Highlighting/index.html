@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dignissimos veritatis commodi molestiae delectus necessitatibus itaque? Maiores qui doloremque accusantium deleniti ea sed obcaecati, quia praesentium sunt, nostrum, harum omnis.</p>
+    <script>
+        let paragraph=document.getElementById('paragraph');
+  let words = paragraph.textContent.split(' ');
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > 8) {
+      words[i] = '<span style="color: yellow">' + words[i] + '</span>';
+    }
+  }
+  paragraph.innerHTML = words.join(' ');
+    </script>
+</body>
+</html>
