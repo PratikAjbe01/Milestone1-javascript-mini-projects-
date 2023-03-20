@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bill Calculator</h1>
+    <br>
+    <h2>Enter the price of dish</h2>
+    <input type="text" id="dish" oninput="calBill()">
+    <h2 id="totalbill"></h2>
+    <h2 id="billofone"></h2>
+    <script>
+function calBill() {
+    let dish = document.getElementById('dish').value;
+    document.getElementById('totalbill').innerHTML = "Rs " + dish;
+
+    let noOfperson = prompt("Enter no of persons sharing it");
+    if (noOfperson != null) {
+      document.getElementById('billofone').innerHTML = "Rs " + (dish / noOfperson);
+    }
+  }
+    </script>
+</body>
+</html>
