@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1st.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter passward</h1>
+        <input type="password" name="" id="pass1">
+        <h1>Enter passward again</h1>
+        <input type="password" name="" id="pass2">
+        <h2 id="ans"></h2>
+        <h2 id="ans1"></h2>
+        <button type="submit" onclick="checkpassward()">confirm</button>
+    </div>
+    <script>
+        const pass1=document.getElementById("pass1");
+        const pass2=document.getElementById("pass2");
+        let ans=document.getElementById("ans");
+
+        function checkpassward(){
+            if(pass1.value===pass2.value){
+                ans.innerText="passward validation sucessful";
+            }
+        else
+                ans.innerText="passward validation unsucessful.";
+        
+        }
+    </script>
+</body>
+</html>
