@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    width: 700px;
+    padding: 30px;
+    margin-top: 30px;
+  }
+  
+  #img {
+    margin-bottom: 50px;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .controls > button {
+    margin: 0px 5px;
+    height: 40px;
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
