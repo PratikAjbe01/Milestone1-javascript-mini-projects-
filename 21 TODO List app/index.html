@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+        .box{
+            width: 600px;
+            min-height: 500px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        #item{
+            width:100%;
+            font-size: 20px;
+            padding: 10px;
+            border: 0;
+            outline: 0;
+            font-weight: bold;
+            box-shadow: 0px 0px 0px 2px grey;
+            display: block;
+        }
+        #to-do-box{
+            margin:20px ;
+            list-style-type: none;
+        }
+        #to-do-box li{
+            list-style-type: none;
+            text-align: justify;
+background-color: blue;
+color: white;
+padding: 10px;
+border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <input type="text" id="item" autofocus placeholder="create to do list">
+        <ul id="to-do-box">
+            <li>Today's Task</li>
+        </ul>
+
+    </div>
+    <script>
+        let item=document.getElementById('item');
+        let todobox=document.getElementById('to-do-box');
+        item.addEventListener('keydown',(event)=>{
+if(event.key=='Enter'){
+    let li=document.createElement('li');
+    let cross=document.createElement('button');
+    cross.innerText="X";
+    li.textContent=item.value;
+    todobox.appendChild(li);
+    li.appendChild(cross);
+    item.value='';
+    cross.addEventListener('click',()=>{
+        li.remove();
+    })
+}
+        })
+
+    </script>
+</body>
+</html>
