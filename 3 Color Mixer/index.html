@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="color1" id="color1">
+        <h2>+</h2>
+        <input type="text" placeholder="color2" id="color2"><br>
+        <button onclick="changecolor()">New Color</button>
+        <h3 id="message"></h3>
+    </div>
+<script>
+    color1=document.getElementById('color1');
+    color2=document.getElementById('color2');
+    var message=document.getElementById('message');
+function changecolor(){
+    if(color1.value==='blue'&& color2.value==='red'){
+       document.body.style.backgroundColor='purple';
+    }
+    else if(color1.value==='red'&& color2.value==='yellow'){
+        document.body.style.backgroundColor='orange';
+    }
+    else if(color1.value==='blue'&& color2.value==='yellow'){
+        document.body.style.backgroundColor='green';
+    }
+    else{
+        message.innerText='invalid combination';
+    }
+}
+</script>
+</body>
+</html>
