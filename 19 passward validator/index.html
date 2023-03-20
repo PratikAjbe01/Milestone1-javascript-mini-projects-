@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form{
+            height: 35vh;
+            width: 15vw;
+            text-align: center;
+            background-color: goldenrod;
+            border-radius: 25px;
+            padding: 20px;
+        }
+        input{
+            margin: 20px 0;
+            border: none;
+            background-color: goldenrod;
+            border-bottom: 2px solid black;
+        }
+        button{
+            font-weight: 300;
+            padding: 10px;
+            background-color: black;
+            color:white;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h3>Enter Email:</h3>
+        <input type="email" name="" id="email">
+        <h3>Enter password:</h3>
+        <input type="password" name="" id="password"><br>
+        <button type="submit" id="button">Login</button>
+        <h3 id="ans"></h3>
+    </div>
+    <script>
+  let password = document.getElementById('password');
+    let email = document.getElementById('email');
+    let button = document.getElementById('button');
+    button.addEventListener('click', () => {
+        if (password.value.length > 8 && email.value.indexOf("@")!==-1) {
+            document.getElementById('ans').innerHTML = 'Validation successful';
+        } else {
+            document.getElementById('ans').innerHTML = 'Validation unsuccessful';
+        }
+    });
+
+    </script>
+</body>
+</html>
