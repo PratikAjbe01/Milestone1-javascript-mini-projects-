@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="toggle-button">Toggle Text</button>
+<div id="text-container">the most affordable learning platform</div>
+<script>
+    const button = document.getElementById('toggle-button');
+const textContainer = document.getElementById('text-container');
+const text1 = 'the most affordable learning platform';
+const text2 = 'Pw skills';
+let toggleState = false;
+
+button.addEventListener('click', () => {
+  toggleState = !toggleState; 
+  textContainer.textContent = toggleState ? text2 : text1;
+});
+
+</script>
+    
+</body>
+</html>
